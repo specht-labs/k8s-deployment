@@ -9,6 +9,12 @@ ingress-nginx:
     ingressClassByName: true
     watchIngressWithoutClass: false
 
+    # image:
+    #   tag: "v1.12.1" # depending on https://github.com/kubernetes/ingress-nginx/pull/13068 to be merged
+
+    admissionWebhooks:
+      enabled: false
+
     resources:
       requests:
         cpu: 535m
